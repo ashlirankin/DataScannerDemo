@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E2EDEBD2852C46600488A28 /* DataScannerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2EDEBC2852C46600488A28 /* DataScannerManager.swift */; };
 		2E35A48E2852A380004F0FB1 /* DataScannerDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E35A48D2852A380004F0FB1 /* DataScannerDemoApp.swift */; };
 		2E35A4902852A380004F0FB1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E35A48F2852A380004F0FB1 /* ContentView.swift */; };
 		2E35A4922852A381004F0FB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E35A4912852A381004F0FB1 /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2E2EDEBC2852C46600488A28 /* DataScannerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataScannerManager.swift; sourceTree = "<group>"; };
 		2E35A48A2852A380004F0FB1 /* DataScannerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataScannerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E35A48D2852A380004F0FB1 /* DataScannerDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataScannerDemoApp.swift; sourceTree = "<group>"; };
 		2E35A48F2852A380004F0FB1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				2E35A4912852A381004F0FB1 /* Assets.xcassets */,
 				2E35A4932852A381004F0FB1 /* Preview Content */,
 				2E35A4B72852A3BB004F0FB1 /* BarcodeScannerView.swift */,
+				2E2EDEBC2852C46600488A28 /* DataScannerManager.swift */,
 			);
 			path = DataScannerDemo;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 			files = (
 				2E35A4B82852A3BB004F0FB1 /* BarcodeScannerView.swift in Sources */,
 				2E35A4902852A380004F0FB1 /* ContentView.swift in Sources */,
+				2E2EDEBD2852C46600488A28 /* DataScannerManager.swift in Sources */,
 				2E35A48E2852A380004F0FB1 /* DataScannerDemoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
