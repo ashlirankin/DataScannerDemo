@@ -10,7 +10,6 @@ import SwiftUI
 struct ContentView: View {
     
     @StateObject private var dataScannerManager: DataScannerManager = DataScannerManager()
-    @State private var recognisedBarcodeString: String = ""
     
     var body: some View {
         BarcodeScannerView(dataScannerManager: dataScannerManager)
@@ -19,21 +18,17 @@ struct ContentView: View {
                     dataScannerManager.recognisedBarcodeString = ""
                 }
             })
-            .overlay(alignment: .bottom, content: {
-                if !recognisedBarcodeString.isEmpty {
+            .overlay(alignment: .bottomLeading, content: {
+                if !dataScannerManager.recognisedBarcodeString.isEmpty {
                     ZStack {
                         HStack {
                             Text("Barcode Number:")
-                            Text(recognisedBarcodeString)
+                            Text(dataScannerManager.recognisedBarcodeString)
                         }
-                        Color.white
+                        .padding(.leading, 16)
                     }
                     .frame(height: 300)
                 }
-            })
-        
-            .onChange(of: dataScannerManager.recognisedBarcodeString, perform: { newValue in
-                recognisedBarcodeString = newValue
             })
     }
 }

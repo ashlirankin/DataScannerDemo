@@ -8,9 +8,10 @@
 import SwiftUI
 import VisionKit
 
-/// <#Description#>
+/// A view that allows for the scanning of a barcode.
 struct BarcodeScannerView: UIViewControllerRepresentable {
     
+    /// Manages the logic related to scanning data.
     @ObservedObject var dataScannerManager: DataScannerManager
     
     func makeUIViewController(context: Context) -> DataScannerViewController {

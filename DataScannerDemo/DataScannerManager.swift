@@ -8,9 +8,14 @@
 import SwiftUI
 import VisionKit
 
+
+/// Manages the properties and methods related to data scanning.
 final class DataScannerManager: NSObject, ObservableObject, DataScannerViewControllerDelegate {
     
-    @Published private(set) var error: DataScannerViewController.ScanningUnavailable?
+    /// Value indicating that scanning has failed.
+    @Published private(set) var dataScannerFailure: DataScannerViewController.ScanningUnavailable?
+    
+    /// The string of the recognized barcode.
     @Published var recognisedBarcodeString: String = ""
    
     // MARK: - DataScannerViewControllerDelegate
@@ -25,6 +30,6 @@ final class DataScannerManager: NSObject, ObservableObject, DataScannerViewContr
     }
     
     func dataScanner(_ dataScanner: DataScannerViewController, becameUnavailableWithError error: DataScannerViewController.ScanningUnavailable) {
-         self.error = error
+         self.dataScannerFailure = error
     }
 }
