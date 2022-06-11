@@ -63,10 +63,10 @@ extension VideoSessionController: AVCaptureMetadataOutputObjectsDelegate {
 ### After 
 After iOS 16 we are give an abstracted API to integrate data scanner without the hassles of working with AVFoundation. The code below wraps the new `DataScannerViewController` in `UIViewControllerRepresentable` to be able to use it in SwiftUI.
 I also want to cal out a few thing when using this API.
-1. Apple has nicely integrated Guidance into this controller so it displays on screen prompts to guide the user in a direction which would allows the camera to pickup the target barcode more easily.
-2. Inorder to receive the value of the scanned barcode the user must tap the screen after the barcode is recognised. There is no on screen prompt to indicate that the scanning has been complete.
-3. If you have enabled `isHighlightingEnabled` in the initializer of the `DataScannerViewController` an on screen rectangle will be presented to highlight the frame of the bardoe which was scanned, which I think is a nice touch.
-4. Dont forget to set the `delegate` inorder to receive any changes you must set the delegate as an object and conformm to it.
+1. Apple has nicely integrated Guidance into this controller so it displays on screen prompts to guide the user in a direction which would allow the camera to pickup the target barcode more easily.
+2. In order to receive the value of the scanned barcode the user must tap the screen after the barcode is recognised. There is no on screen prompt to indicate that the scanning has been complete.
+3. If you have enabled `isHighlightingEnabled` in the initializer of the `DataScannerViewController` an on screen rectangle will be presented to highlight the frame of the barcode which was scanned, which I think is a nice touch.
+4. Dont forget to set the `delegate` in order to receive any changes you must set the `delegate` as an object and conformm to it.
 5. This API is also in beta changes may come to it but not to worry, I will make updates as they arise.
 ```swift
 /// A view that allows for the scanning of a barcode.
